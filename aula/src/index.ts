@@ -30,7 +30,10 @@ app.post("/todos", (req, res) => {
 });
 
 app.patch("/todos", (req, res) => {
-  return res.send({ message: "Eu atualizo uma nota." });
+  // Cabeçalho
+  // req.headers - configurações de requisição / chaves de autorização
+  console.log(req.headers);
+  return res.send(req.headers);
 });
 
 app.delete("/todos", (req, res) => {
