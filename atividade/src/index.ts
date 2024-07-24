@@ -2,8 +2,16 @@ import fastify from "fastify";
 
 const app = fastify();
 
-app.get("/", (req, res) => {
-    return res.send({ message: "Olá, sou Alex!"})
+app.post("/users", (req, res) => {
+    return res.send({ message: "Eu cadastro um usuário."});
+})
+
+app.patch("/users/password", (req, res) => {
+    return res.send({ message: "Eu atualizo a senha do usuário."});
+})
+
+app.get("/users", (req, res) => {
+    return res.send({ message: "Eu trago o usuário."});
 });
 
 const PORT = 3001;

@@ -1,4 +1,5 @@
-# Crie uma base de NodeJS com Typescript e Fastify
-# Crie uma rota que imprima a mensagem "Olá, sou <seunome>"
-
-Não se esqueça de ignorar a pasta "node_modules"
+# Imaginando uma API de gerenciamento de usuários
+# Crie 
+- uma rota de post para cadastro, 
+- uma rota de get para leitura de usuário
+- uma rota de patch para atualização de senha

@@ -13,7 +13,7 @@ app.get("/todos", (req, res) => {
 });
 
 app.post("/todos", (req, res) => {
-  return res.send({ message: "Eu cadastrado uma nota." });
+  return res.send({ message: "Eu cadastro uma nota." });
 });
 
 app.patch("/todos", (req, res) => {
