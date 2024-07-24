@@ -1,43 +1,28 @@
-import fastify from "fastify";
+import fastify, { FastifyRequest } from "fastify";
+import { ITodo } from "./interfaces/todos.interface";
 
 const app = fastify({
-    logger: true
+  logger: true,
 });
 
-// Verbos HTTP
-// Get - rotas de leitura
-// Post - rotas de cadastro / inserção de dados
-// Delete - rotas de exclusão
-// Patch / Put - rotas de atualização de dados
+const todoDatabase: ITodo[] = [];
 
-app.get("/todos/:id/:id2", (req, res) => {
-  // Parâmetros obrigatórios  
-  // req.params - (precisa ser definido) - seleção de recursos
-  console.log(req.params);
+let id = 1;
 
-  // Parâmetros opcionais
-  // req.query (queryparams) - preferências, filtros
+// Ler todas as todos, criar uma todo e excluir uma todo
 
-  // Parâmetros (obrigatórios e opcionais) sempre são recebidos em formato de texto
-  return res.send({ params: req.params, query: req.query });
-});
+app.post("/todos", (req: FastifyRequest<{ Body: Omit<ITodo, "id"> }>, res) => {
+  const newTodo: ITodo = {
+    id,
+    title: req.body.title,
+    content: req.body.content,
+  };
 
-app.post("/todos", (req, res) => {
-  // Corpo (POST, PATCH, PUT)
-  // req.body - dados relacionados a entidade (string, number, boolean, array e objeto)
-  console.log(req.body);  
-  return res.send(req.body);
-});
+  todoDatabase.push(newTodo);
 
-app.patch("/todos", (req, res) => {
-  // Cabeçalho
-  // req.headers - configurações de requisição / chaves de autorização
-  console.log(req.headers);
-  return res.send(req.headers);
-});
+  id++;
 
-app.delete("/todos", (req, res) => {
-  return res.send({ message: "Eu excluo uma nota." });
+  return res.send(newTodo);
 });
 
 const PORT = 3001;
