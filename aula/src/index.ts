@@ -14,7 +14,12 @@ app.get("/todos/:id/:id2", (req, res) => {
   // Parâmetros obrigatórios  
   // req.params - (precisa ser definido) - seleção de recursos
   console.log(req.params);
-  return res.send(req.params);
+
+  // Parâmetros opcionais
+  // req.query (queryparams) - preferências, filtros
+
+  // Parâmetros (obrigatórios e opcionais) sempre são recebidos em formato de texto
+  return res.send({ params: req.params, query: req.query });
 });
 
 app.post("/todos", (req, res) => {
