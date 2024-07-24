@@ -1,12 +1,8 @@
 import fastify from "fastify";
-import { todosControllers } from "./controllers/todos.controllers";
+import { todosRoutes } from "./routes/todos.routes";
 
 export const app = fastify({
   logger: true,
 });
 
-app.get("/todos", todosControllers.getMany);
-
-app.post("/todos", todosControllers.create);
-
-app.delete("/todos/:id", todosControllers.remove);
+app.register(todosRoutes, { prefix: "/todos"});
