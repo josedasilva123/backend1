@@ -10,17 +10,16 @@ const app = fastify({
 // Delete - rotas de exclusão
 // Patch / Put - rotas de atualização de dados
 
-app.get("/todos", (req, res) => {
-  // Conjunto de dados que vem de forma externa para nossa requisição
-  // Entrada - Etapas - Saídas
-  // Entrada (Externa) - Etapas - Saídas (Resposta)
-
-  return res.send({ message: "Eu listo todas as notas." });
+app.get("/todos/:id/:id2", (req, res) => {
+  // Parâmetros obrigatórios  
+  // req.params - (precisa ser definido) - seleção de recursos
+  console.log(req.params);
+  return res.send(req.params);
 });
 
 app.post("/todos", (req, res) => {
   // Corpo (POST, PATCH, PUT)
-  // req.body - dados relacionado a entidade (string, number, boolean, array e objeto)
+  // req.body - dados relacionados a entidade (string, number, boolean, array e objeto)
   console.log(req.body);  
   return res.send(req.body);
 });
