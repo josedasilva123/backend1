@@ -1,5 +1,11 @@
-# Imaginando uma API de gerenciamento de usuários
-# Crie 
-- uma rota de post para cadastro, 
-- uma rota de get para leitura de usuário
-- uma rota de patch para atualização de senha
+# Utilizando as rotas da atividade anterior
+
+Crie lógica de funcionamento para 
+- O cadastro de usuário
+- A leitura individual de usuário
+
+O usuário deverá conter 
+
+id, nome, email e senha
+
+(A senha não deverá ser retornada na resposta)
