@@ -8,8 +8,20 @@ const app = fastify();
 // Delete - rotas de exclusão
 // Patch / Put - rotas de atualização de dados
 
-app.get("/hello", (req, res) => {
-  return res.send({ message: "Olá, estou aprendendo back-end!" });
+app.get("/todos", (req, res) => {
+  return res.send({ message: "Eu listo todas as notas." });
+});
+
+app.post("/todos", (req, res) => {
+  return res.send({ message: "Eu cadastrado uma nota." });
+});
+
+app.patch("/todos", (req, res) => {
+  return res.send({ message: "Eu atualizo uma nota." });
+});
+
+app.delete("/todos", (req, res) => {
+  return res.send({ message: "Eu excluo uma nota." });
 });
 
 const PORT = 3001;
