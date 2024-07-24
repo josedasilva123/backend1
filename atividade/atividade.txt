@@ -1,0 +1,4 @@
+# Crie uma base de NodeJS com Typescript e Fastify
+# Crie uma rota que imprima a mensagem "Olá, sou <seunome>"
+
+Não se esqueça de ignorar a pasta "node_modules"

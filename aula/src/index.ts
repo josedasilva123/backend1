@@ -9,11 +9,11 @@ const app = fastify();
 // Patch / Put - rotas de atualização de dados
 
 app.get("/hello", (req, res) => {
-    return res.send({ message: "Olá, estou aprendendo back-end!"});
+  return res.send({ message: "Olá, estou aprendendo back-end!" });
 });
 
 const PORT = 3001;
 
 app.listen({ port: PORT }, () => {
-    console.log("API successfully started at port " + PORT)
+  console.log("API successfully started at port " + PORT);
 });
