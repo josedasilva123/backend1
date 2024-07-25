@@ -1,11 +1,10 @@
-# Utilizando as rotas da atividade anterior
+# Refatorando a API
 
-Crie lógica de funcionamento para 
-- O cadastro de usuário
-- A leitura individual de usuário
+Refatore a API criada nas atividades anteriores
+seguindo todas as orientações de arquitetura 
+apresentadas e aula
 
-O usuário deverá conter 
-
-id, nome, email e senha
-
-(A senha não deverá ser retornada na resposta)
+- app / server
+- database
+- services / controllers
+- routes
