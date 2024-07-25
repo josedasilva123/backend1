@@ -1,10 +1,16 @@
-# Refatorando a API
+# Tratando errors, buildando e executando
 
-Refatore a API criada nas atividades anteriores
-seguindo todas as orientações de arquitetura 
-apresentadas e aula
+Crie um error handler conforme aprendido em aula
 
-- app / server
-- database
-- services / controllers
-- routes
+Trate os seguintes erros:
+# Criação:
+- Caso falte alguma das chaves necessárias (nome, email ou senha)
+(Erro 400)
+- Caso o e-mail fornecido já esteja associado a outro usuário
+(Erro 403)
+
+# Leitura
+- Caso o usuário não seja encontrado
+(Erro 404)
+
+Builde a aplicação, execute e teste todas as situações

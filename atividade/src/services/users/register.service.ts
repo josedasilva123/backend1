@@ -1,17 +1,17 @@
 import { generateId, usersDatabase } from "../../database/users.database";
 import { IUser } from "../../interfaces/users.interface";
 
-export function register(body: Omit<IUser, "id">){
-    const { name, email, password } = body;
-  
-    const newUser: IUser = {
-      id: generateId(),
-      name,
-      email,
-      password,
-    };  
+export function register(body: Omit<IUser, "id">) {
+  const { name, email, password } = body;
 
-    usersDatabase.push(newUser);
+  const newUser: IUser = {
+    id: generateId(),
+    name,
+    email,
+    password,
+  };
 
-    return { id: newUser.id, name: newUser.name, email: newUser.email };
+  usersDatabase.push(newUser);
+
+  return { id: newUser.id, name: newUser.name, email: newUser.email };
 }
