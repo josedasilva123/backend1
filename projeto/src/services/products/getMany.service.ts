@@ -32,8 +32,7 @@ export function getMany({ search, skip = 0, count = 10 }: Params) {
   }
 
   const firstIndex = skip;
-  const lastIndex = skip + count - 1;
-
+  const lastIndex = skip + count;
   const pagedResults = results.slice(firstIndex, lastIndex);
 
   return { count: results.length, pagedResults };
