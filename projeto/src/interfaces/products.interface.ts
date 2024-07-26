@@ -6,3 +6,5 @@ export interface IProduct{
     createdAt: Date;
     updatedAt?: Date;
 }
+
+export type TCreateProductData = Pick<IProduct, "name" | "description" | "price">;
