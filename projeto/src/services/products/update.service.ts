@@ -1,4 +1,5 @@
 import { productsDatabase } from "../../database/products.database";
+import { AppError } from "../../errors/AppError";
 import {
   IProduct,
   TUpdateProductData,
@@ -8,7 +9,7 @@ export function update(id: number, body: TUpdateProductData) {
   const currentProduct = productsDatabase.find((product) => product.id === id);
 
   if (!currentProduct) {
-    throw new Error("Product not found.");
+    throw new AppError("Product not found.", 404);
   }
 
   const now = new Date();
