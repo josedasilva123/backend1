@@ -8,3 +8,5 @@ export interface IProduct{
 }
 
 export type TCreateProductData = Pick<IProduct, "name" | "description" | "price">;
+
+export type TUpdateProductData = Partial<TCreateProductData>;
