@@ -1,8 +1,3 @@
-// PUT
-// Substituir recursos por completo (1 ou mais recursos)
-// Patch
-// Atualização parcial
-
 import { productsDatabase } from "../../database/products.database";
 import {
   IProduct,

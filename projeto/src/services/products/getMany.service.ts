@@ -7,14 +7,6 @@ interface Params {
   count?: number;
 }
 
-// Count - quantidade de itens por página
-// Skip - quantidade de itens que eu devo pular
-
-// 30 Produtos (Count: 10)
-// Skip: 0
-// Skip: 10
-// Skip: 20
-
 export function getMany({ search, skip = 0, count = 10 }: Params) {
   let results: IProduct[] = [];
 
