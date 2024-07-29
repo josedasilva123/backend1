@@ -115,12 +115,12 @@ Padrão de resposta (200)
 
 ```json
 {
-	"id": 1,
-	"name": "Notebook Gamer X",
-    "description": "Notebook gamer top",
-	"price": 3000,
-	"createdAt": "2024-07-26T22:25:25.844Z",
-	"updatedAt": "2024-07-26T22:25:32.893Z"
+  "id": 1,
+  "name": "Notebook Gamer X",
+  "description": "Notebook gamer top",
+  "price": 3000,
+  "createdAt": "2024-07-26T22:25:25.844Z",
+  "updatedAt": "2024-07-26T22:25:32.893Z"
 }
 ```
 
