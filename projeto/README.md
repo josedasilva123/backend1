@@ -35,28 +35,30 @@ Padrão corpo
 ```json
 {
   "name": "Notebook Gamer",
+  "description?": "Notebook gamer top",
   "price": 3000
 }
 ```
 
-Padrão de resposta
+Padrão de resposta (201)
 
 ```json
 {
   "id": 1,
   "name": "Notebook Gamer",
+  "description": "Notebook gamer top",
   "price": 3000,
-  "createdAt": "2024-07-26T22:26:07.977Z"
+  "createdAt": "2024-07-29T21:44:23.601Z"
 }
 ```
 
 ##### Possíveis erros:
 
-Erro (400) - Missing body parameters
+- Erro (400) - Missing body parameters
 
 #### GET /products - Leitura de produtos
 
-Padrão de resposta
+Padrão de resposta (200)
 
 ```json
 {
@@ -72,10 +74,56 @@ Padrão de resposta
 }
 ```
 
-#### Parâmetros (query)
+##### Parâmetros (query)
 
 | Parâmetro | Descrição                                   |
 | --------- | ------------------------------------------- |
 | search    | Termo de busca                              |
 | count     | Quantidade de itens por página (padrão: 10) |
 | skip      | Quantos itens devem ser pulados (padrão: 0) |
+
+#### GET /products/:id - Leitura de produto individual
+
+Padrão de resposta (200)
+
+```json
+{
+  "id": 1,
+  "name": "Notebook Gamer",
+  "price": 3000,
+  "createdAt": "2024-07-29T21:41:41.961Z"
+}
+```
+
+##### Possíveis erros:
+
+- Erro (404) - Produto não encontrado
+
+#### PATCH /products/:id - Atualização de produto
+
+Padrão de corpo
+
+```json
+{
+  "name?": "Notebook Gamer",
+  "description?": "Notebook gamer top",
+  "price?": 3000
+}
+```
+
+Padrão de resposta (200)
+
+```json
+{
+	"id": 1,
+	"name": "Notebook Gamer X",
+    "description": "Notebook gamer top",
+	"price": 3000,
+	"createdAt": "2024-07-26T22:25:25.844Z",
+	"updatedAt": "2024-07-26T22:25:32.893Z"
+}
+```
+
+##### Possíveis erros:
+
+- Erro (404) - Produto não encontrado
