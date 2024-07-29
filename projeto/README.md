@@ -127,3 +127,17 @@ Padrão de resposta (200)
 ##### Possíveis erros:
 
 - Erro (404) - Produto não encontrado
+
+#### DELETE /products/:id - Remoção de produto
+
+Padrão de resposta (200)
+
+```json
+{
+	"message": "Product successfully deleted."
+}
+```
+
+##### Possíveis erros:
+
+- Erro (404) - Produto não encontrado
