@@ -1,0 +1,16 @@
+# Tratando errors, buildando e executando
+
+Crie um error handler conforme aprendido em aula
+
+Trate os seguintes erros:
+# Criação:
+- Caso falte alguma das chaves necessárias (nome, email ou senha)
+(Erro 400)
+- Caso o e-mail fornecido já esteja associado a outro usuário
+(Erro 403)
+
+# Leitura
+- Caso o usuário não seja encontrado
+(Erro 404)
+
+Builde a aplicação, execute e teste todas as situações
